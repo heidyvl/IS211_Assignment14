@@ -4,7 +4,7 @@ import sys
 def fibonacci(n):
     if n == 0:
         return 0
-    elif n == 1:
+    elif n == 1 or n==2:
         return 1
     else:
         return fibonacci(n-1)+fibonacci(n-2)
@@ -36,7 +36,7 @@ def main():
     print 'FIBONACCI'
     while True:
             try:
-                n = input("Enter Number to fibonacci ")
+                n = input("Enter Number to fibonacci: ")
             
             except(SyntaxError, ValueError): continue
             print fibonacci(n)
@@ -45,21 +45,21 @@ def main():
             print 'EUCLYDS GCD'
     while True:
             try:
-                a= input('Enter first number ')
+                a= input('Enter first number: ')
             except(SyntaxError, ValueError): continue
 
             break
     while True:
         try:
-            b = input('Enter second number ')
+            b = input('Enter second number: ')
         except(SyntaxError, ValueError): continue
             
         print gcd(a,b)
         break
 
     print 'COMPARING STRINGS'
-    s1= raw_input('Enter first str ')
-    s2 = raw_input('Enter second str ')
+    s1= raw_input('Enter first str: ')
+    s2 = raw_input('Enter second str: ')
     print compareTo(s1,s2)
 
 if __name__=='__main__':
