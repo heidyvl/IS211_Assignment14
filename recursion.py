@@ -1,3 +1,6 @@
+import sys
+
+
 def fibonacci(n):
     if n == 0:
         return 0
@@ -29,7 +32,7 @@ def compareTo(s1, s2):
         return int(compareTo(s1[1:],s2[1:])<s1[1:])
 
     
-if __name__=='__main__':
+def main():
     print 'FIBONACCI'
     while True:
             try:
@@ -58,6 +61,18 @@ if __name__=='__main__':
     s1= raw_input('Enter first str ')
     s2 = raw_input('Enter second str ')
     print compareTo(s1,s2)
-            
+
+if __name__=='__main__':
+    main()
+    action = None
+    while action != 0 or action !=1:
+            try:
+                action = input('Press 1 to try again or 0 to quit ')
+                if action == 1:
+                    main()
+                else:
+                    sys.exit()
+            except (ValueError, SyntaxError):
+                continue
 
 
